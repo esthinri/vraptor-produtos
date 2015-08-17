@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<c:forEach var="error" items="${errors}">
+    ${error.category} - ${error.message}<br />
+	</c:forEach>
 	<form action='<c:url value="/produto/adiciona" />' method="post">
 		Nome: <input type="text" name="produto.nome" /> Descrição: <input
 			type="text" name="produto.descricao" /> Preço: <input type="text"
